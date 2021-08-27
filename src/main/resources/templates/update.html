@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Update!</title>
+</head>
+<body>
+<div class="container">
+    <h1>Update product!</h1>
+
+    <form action="/update" method="post">
+        <input type="hidden" name="id" th:value="${product.id}">
+        <div class="form-group">
+            <input type="text" name="name" th:value="${product.name}" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="text" name="price" th:value="${product.price}" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Update product</button>
+    </form>
+
+</div>
+</body>
+</html>
