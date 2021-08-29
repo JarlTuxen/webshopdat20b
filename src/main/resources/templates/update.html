@@ -8,23 +8,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Update!</title>
+    <title>Opdater</title>
 </head>
 <body>
 <div class="container">
-    <h1>Update product!</h1>
+    <h1>Opdater vare</h1>
 
     <form action="/update" method="post">
         <input type="hidden" name="id" th:value="${product.id}">
         <div class="form-group">
-            <label for="name" class="form-label">Product name</label>
+            <label for="name" class="form-label">Varenavn</label>
             <input type="text" name="name" th:value="${product.name}" class="form-control">
         </div>
         <div class="form-group">
-            <label for="name" class="form-label">Product price</label>
+            <label for="name" class="form-label">Varepris</label>
             <input type="text" name="price" th:value="${product.price}" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Update product</button>
+        <button type="submit" class="btn btn-primary">Opdater vare</button>
     </form>
 
 </div>
