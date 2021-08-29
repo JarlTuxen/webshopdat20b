@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,30 +10,30 @@
     <title>Webshop</title>
 </head>
 <body>
-
+<div class="container">
 <h1>Vareliste</h1>
 <!-- varetabel -->
-<table>
+<table class="table">
     <thead>
     <tr>
-        <th>Varenavn</th>
-        <th>Pris</th>
-        <th></th>
-        <th></th>
+        <th scope="col">Varenavn</th>
+        <th scope="col">Pris</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="product : ${products}">
+    <tr th:each="product : ${products}" scope="row">
         <td th:text="${product.name}">kaffe</td>
         <td th:text="${product.price}">35</td>
-        <td><a th:href="@{'/update/' + ${product.id}}">opdater</a></td>
-        <td><a th:href="@{'/delete/' + ${product.id}}">slet</a></td>
+        <td><a th:href="@{'/update/' + ${product.id}}" class="btn btn-warning">opdater</a></td>
+        <td><a th:href="@{'/delete/' + ${product.id}}" class="btn btn-danger">slet</a></td>
     </tr>
     </tbody>
 
 </table>
 
-<a href="create">Opret product</a>
-
+<a href="create"class="btn btn-primary">Opret product</a>
+</div>
 </body>
 </html>

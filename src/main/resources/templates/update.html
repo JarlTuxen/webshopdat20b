@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,9 +17,11 @@
     <form action="/update" method="post">
         <input type="hidden" name="id" th:value="${product.id}">
         <div class="form-group">
+            <label for="name" class="form-label">Product name</label>
             <input type="text" name="name" th:value="${product.name}" class="form-control">
         </div>
         <div class="form-group">
+            <label for="name" class="form-label">Product price</label>
             <input type="text" name="price" th:value="${product.price}" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">Update product</button>
