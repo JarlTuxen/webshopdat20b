@@ -1,7 +1,7 @@
-package dk.kea.webshopdat20b.Service;
+package dk.kea.webshopdat20b.service;
 
-import dk.kea.webshopdat20b.Model.Product;
-import dk.kea.webshopdat20b.Repository.ProductRepository;
+import dk.kea.webshopdat20b.model.Product;
+import dk.kea.webshopdat20b.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

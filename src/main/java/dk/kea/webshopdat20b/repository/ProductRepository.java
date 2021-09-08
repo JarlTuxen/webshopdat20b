@@ -1,6 +1,6 @@
-package dk.kea.webshopdat20b.Repository;
+package dk.kea.webshopdat20b.repository;
 
-import dk.kea.webshopdat20b.Model.Product;
+import dk.kea.webshopdat20b.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

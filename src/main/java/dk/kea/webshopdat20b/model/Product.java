@@ -1,4 +1,4 @@
-package dk.kea.webshopdat20b.Model;
+package dk.kea.webshopdat20b.model;
 
 public class Product {
 
