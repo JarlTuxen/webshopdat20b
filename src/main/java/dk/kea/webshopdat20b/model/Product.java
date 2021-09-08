@@ -1,7 +1,15 @@
 package dk.kea.webshopdat20b.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private int price;
@@ -15,7 +23,7 @@ public class Product {
         this.price = price;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 

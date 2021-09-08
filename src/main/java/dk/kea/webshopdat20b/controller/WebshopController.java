@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Optional;
+
 @Controller
 public class WebshopController {
 
@@ -46,8 +48,13 @@ public class WebshopController {
     @GetMapping("/update/{id}")
     public String showUpdate(@PathVariable("id") int id, Model model)
     {
-        model.addAttribute("product", productService.findProductById(id));
-        return "update";
+        Optional<Product> optionalProduct = productService.findProductById(id);
+        if (optionalProduct.isPresent()) {
+            model.addAttribute("product", optionalProduct.get());
+            return "update";
+        }
+        else
+            return "index";
     }
 
     @PostMapping("/update")
