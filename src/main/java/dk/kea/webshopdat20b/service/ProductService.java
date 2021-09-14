@@ -18,10 +18,11 @@ public class ProductService {
     public List<Product> getAll()
     {
         List<Product> products = new ArrayList<>();
-        for (Product product:productRepository.findAll())
+        /*for (Product product:productRepository.findAll())
         {
             products.add(product);
-        }
+        }*/
+        productRepository.findAll().forEach(products::add);
         return products;
     }
 
